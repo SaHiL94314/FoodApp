@@ -5,6 +5,7 @@ app.listen(3000);
 
 app.use(express.json());
 app.use(cookieParser());
+app.use(express.static('dist'));
 
 const userRouter=require('./Routers/userRouter');
 app.use('/user',userRouter);
